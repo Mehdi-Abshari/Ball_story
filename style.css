@@ -1,0 +1,103 @@
+/* All Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdebec;
+}
+
+/* Container Style */
+#container {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Balls Style */
+.balls {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 15%;
+  border-radius: 50%;
+  background-color: #272c85;
+  transform-origin: 50%;
+  animation: balls 0.5s alternate infinite ease;
+}
+
+/* Balls animation */
+@keyframes balls {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+/* Balls animation delay */
+.balls:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.balls:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+/* Shadow of ball Style */
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #272c85;
+  opacity: 0.5;
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow 0.5s alternate infinite ease;
+}
+
+/* Shadow of balls animation */
+@keyframes shadow {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+
+/* Shadow of balls animation delay */
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
